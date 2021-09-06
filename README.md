@@ -13,8 +13,11 @@ We provide the following files for future experiments:
 
 The final generated data for our Veale and Wikiepedia sourced entities:
 [DE Veale](https://obj.umiacs.umd.edu/adaptation/wikidata_de_veale.txt)
+
 [DE Wikipedia](https://obj.umiacs.umd.edu/adaptation/wikidata_de_wiki.txt)
+
 [EN Veale](https://obj.umiacs.umd.edu/adaptation/wikidata_us_veale.txt)
+
 [EN Wikipedia](https://obj.umiacs.umd.edu/adaptation/wikidata_us_wiki.txt)
 
 To create it, you will need (combined 50GB):
@@ -33,8 +36,7 @@ https://obj.umiacs.umd.edu/adaptation/10-26-20-wikidata.jsonl
 
 **1) What computing environment do I need?**
 
-Wikipedia and Wikidata are obviously large.  The code for Wikidata used a large RAM CPU (100+ GB) for pre-processing the data, and a GPU for computing Faiss distance.  Since the data is provided in a .jsonl format, the code could likely be reworked to require less CPU memory if needed.  
-The Faiss distance calculation is tractable (~1 hour) on a CPU.  
+Wikipedia and Wikidata are obviously large.  The code for Wikidata used a large RAM CPU (100+ GB) for pre-processing the data, and a GPU for computing Faiss distance.  Since the data is provided in a .jsonl format, the code could likely be reworked to require less CPU memory if needed.  The Faiss distance calculation is tractable (~1 hour) on a CPU.  
 
 **2) I want to create my own WikiData dump:**
 
