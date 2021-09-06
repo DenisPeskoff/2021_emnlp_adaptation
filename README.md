@@ -1,7 +1,5 @@
 # Adapting Entities Across Languages and Cultures
-## published in **EMNLP Findings 2021**
-
-
+**EMNLP Findings 2021**
 
 We provide the following files for future experiments:
 
