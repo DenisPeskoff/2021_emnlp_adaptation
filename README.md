@@ -12,6 +12,7 @@ We provide the following files for future experiments:
 **WikiData Adaptations**
 
 The final generated data for our Veale and Wikiepedia sourced entities:
+
 [DE Veale](https://obj.umiacs.umd.edu/adaptation/wikidata_de_veale.txt)
 
 [DE Wikipedia](https://obj.umiacs.umd.edu/adaptation/wikidata_de_wiki.txt)
