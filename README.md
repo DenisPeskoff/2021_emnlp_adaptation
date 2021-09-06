@@ -31,9 +31,9 @@ https://obj.umiacs.umd.edu/adaptation/10-26-20-wikidata.jsonl
 
 **FAQ**
 
-**1) What enviornment do I need?**
-Wikipedia/Wikidata are obviously large.  The code for Wikidata used a large RAM CPU (100+ GB) for pre-processing the data, and a GPU for computing Faiss distance.  
-Since the data is provided in a .jsonl format, the code could likely be reworked to require less CPU memory if needed.  
+**1) What computing environment do I need?**
+
+Wikipedia and Wikidata are obviously large.  The code for Wikidata used a large RAM CPU (100+ GB) for pre-processing the data, and a GPU for computing Faiss distance.  Since the data is provided in a .jsonl format, the code could likely be reworked to require less CPU memory if needed.  
 The Faiss distance calculation is tractable (~1 hour) on a CPU.  
 
 **2) I want to create my own WikiData dump:**
