@@ -46,7 +46,8 @@ You're looking for the file titled: e.g., wikidata-20210830-all.json.bz2  under 
 2) process the data to get it into .jsonl format (WikiData is unsurprisingly large, so removing unrelated attributes and making it into a JSONLines format---which can be loaded item by item---is a helpful preprocessing step.  
 We use https://github.com/EntilZha/wikidata-rust to make this conversion.  
 
-3) How to evaluate predictions?
+**3) How to evaluate predictions?**
+
 ```
 python evaluate.py --golds <gold_annotations> --predictions <predictions>
 ```
