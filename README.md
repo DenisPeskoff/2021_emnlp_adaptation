@@ -14,12 +14,11 @@ e.g., python evaluate.py --golds evaluation_data/gold_American_VealeNOC.txt --pr
 **Human Evaluations of All Adaptations**
 
 **Embedding-Based Adaptations**
-The final generated data for our VealeNOC and Wikipedia sourced entities is available under embedding_predictions.
+The final generated data for our VealeNOC and Wikipedia sourced entities are available under embedding_predictions.
 There are 6 files: German Veale, German Wiki, American Veale, American Wiki created with the 3cosadd.  And 2 files ("learned") that are trained on Wikipedia and tested on VealeNOC.   
 
 **WikiData Adaptations**
-
-The final generated data for our VealeNOC and Wikipedia sourced entities is available under wikidata_predictions.
+The final generated data for our VealeNOC and Wikipedia sourced entities are available under wikidata_predictions.
 There are 4 files: German Veale, German Wiki, American Veale, American Wiki created with our WikiData method.  
 
 To create them yourself, you will need (combined 50GB):
