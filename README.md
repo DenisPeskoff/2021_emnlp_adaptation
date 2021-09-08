@@ -4,7 +4,9 @@
 We provide the following files for future experiments:
 
 Predictions are evaluated as:
-python evaluate.py --golds <gold_annotations> --predictions <predictions>
+
+_python evaluate.py --golds <gold_annotations> --predictions <predictions>_
+
 e.g., python evaluate.py --golds evaluation_data/gold_American_VealeNOC.txt --predictions embedding_predictions/predictions_3cosadd_American_VealeNOC.txt
     
 **Human Generated Adaptations**
@@ -21,6 +23,7 @@ The final generated data for our VealeNOC and Wikipedia sourced entities is avai
 There are 4 files: German Veale, German Wiki, American Veale, American Wiki created with our WikiData method.  
 
 To create them yourself, you will need (combined 50GB):
+    
 [German Matrix](https://obj.umiacs.umd.edu/adaptation/all_german_matrix.npy)
 
 [American Matrix](https://obj.umiacs.umd.edu/adaptation/all_american_matrix.npy)
