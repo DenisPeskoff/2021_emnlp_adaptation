@@ -39,14 +39,51 @@ https://obj.umiacs.umd.edu/adaptation/10-26-20-wikidata.jsonl
 
 Wikipedia and Wikidata are obviously large.  The code for Wikidata used a large RAM CPU (100+ GB) for pre-processing the data, and a GPU for computing Faiss distance.  Since the data is provided in a .jsonl format, the code could likely be reworked to require less CPU memory if needed.  The Faiss distance calculation is tractable (~1 hour) on a CPU.  
 
-**2) I want to create my own WikiData dump:**
+**2) What python environment do I need?**
+```
+pip install -r requirements.txt
+```
+
+**3) I want to create my own WikiData dump:**
 
 1) download a specific date from  https://dumps.wikimedia.org/wikidatawiki/entities/
 You're looking for the file titled: e.g., wikidata-20210830-all.json.bz2  under a recent date.
 2) process the data to get it into .jsonl format (WikiData is unsurprisingly large, so removing unrelated attributes and making it into a JSONLines format---which can be loaded item by item---is a helpful preprocessing step.  
 We use https://github.com/EntilZha/wikidata-rust to make this conversion.  
 
-**3) How to evaluate predictions?**
+**4) How to produce embeddings based modulations?**
+
+We provide ```modulate.py``` which supports both the unsupervised ```3cosadd``` and the supervised ```learned``` modulation modes. For detailed parameters run:
+```
+python modulate.py -h
+```
+
+* Example American to German modulation with ```3cosadd```:
+```
+python modulate.py \
+    --input input_American_Wiki.txt \
+    --output predictions_3cosadd_American_Wiki.txt \
+    --src_emb vectors-en.txt \
+    --trg_emb vectors-de.txt \
+    --method add \
+    --src_pos Germany \
+    --src_neg United_States \
+    --trg_pos Deutschland \
+    --trg_neg USA
+```
+
+* Example German to American modulation with ```learned```:
+```
+python modulate.py \
+    --input input_German_VealeNOC.txt \
+    --output predictions_learned_German_VealeNOC.txt \
+    --src_emb vectors-de.txt \
+    --trg_emb vectors-en.txt \
+    --method ridge \
+    --train_file train_German_Wiki.txt
+```
+
+**5) How to evaluate predictions?**
 
 ```
 python evaluate.py --golds <gold_annotations> --predictions <predictions>
