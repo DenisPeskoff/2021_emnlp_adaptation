@@ -10,8 +10,10 @@ _python evaluate.py --golds <gold_annotations> --predictions <predictions>_
 e.g., python evaluate.py --golds evaluation_data/gold_American_VealeNOC.txt --predictions embedding_predictions/predictions_3cosadd_American_VealeNOC.txt
     
 **Human Generated Adaptations**
-
+The final human generated data is available under evaluation_data as the four gold files: German VealeNOC, German Wiki, American VealeNOC, American Wiki.
+    
 **Human Evaluations of All Adaptations**
+The questions and the five translator judgements for them are provided at evaluation_data/translator_evaluations.csv.
 
 **Embedding-Based Adaptations**
 The final generated data for our VealeNOC and Wikipedia sourced entities are available under embedding_predictions.
