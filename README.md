@@ -5,9 +5,9 @@ We provide the following files for future experiments:
 
 Predictions are evaluated as:
 
-_python evaluate.py --golds <gold_annotations> --predictions <predictions>_
+_python code/evaluate.py --golds <gold_annotations> --predictions <predictions>_
 
-e.g., python evaluate.py --golds evaluation_data/gold_American_VealeNOC.txt --predictions embedding_predictions/predictions_3cosadd_American_VealeNOC.txt
+e.g., python code/evaluate.py --golds evaluation_data/gold_American_VealeNOC.txt --predictions embedding_predictions/predictions_3cosadd_American_VealeNOC.txt
     
 **Human Generated Adaptations**
 The final human generated data is available under evaluation_data as the four gold files: German VealeNOC, German Wiki, American VealeNOC, American Wiki.
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 We provide ```modulate.py``` which supports both the unsupervised ```3cosadd``` and the supervised ```learned``` modulation modes. For detailed parameters run:
 ```
-python modulate.py -h
+python code/modulate.py -h
 ```
 
 * Example American to German modulation with ```3cosadd```:
@@ -63,7 +63,7 @@ python modulate.py \
 
 * Example German to American modulation with ```learned```:
 ```
-python modulate.py \
+python code/modulate.py \
     --input input_German_VealeNOC.txt \
     --output predictions_learned_German_VealeNOC.txt \
     --src_emb vectors-de.txt \
